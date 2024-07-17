@@ -1,0 +1,18 @@
+#include <stdio.h>
+void copyString(char *destination, const char *source) {
+    while (*source) {
+        *destination = *source;
+        source++;
+        destination++;
+    }
+    *destination = '\0'; 
+}
+int main() {
+    char source[] = "Hello, World!";
+    char destination[50]; 
+ copyString(destination, source);
+ printf("Source String: %s\n", source);
+    printf("Copied String: %s\n", destination);
+
+    return 0;
+}
